@@ -72,11 +72,7 @@ exclude:
   - README.md
   - omc-guide
   - .gitignore
+  - .omc
 
-# 컬렉션처럼 보이게 — for-bio, for-ai, bridge 디렉터리를 사이트에 포함
-include:
-  - for-bio
-  - for-ai
-  - bridge
-
-permalink: /:path/:basename
+# permalink 는 그대로 두면 Jekyll 기본값 (날짜 기반 X, 페이지는 파일 경로 기반).
+# include 도 굳이 명시 안 함 — underscore 시작 디렉토리만 jekyll이 무시함.
