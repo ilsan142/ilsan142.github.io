@@ -1,0 +1,39 @@
+---
+# just-the-docs 위에 살짝 얹는 보강 스타일
+---
+
+@import "{{ site.theme }}";
+
+/* 한국어 폰트 우선순위 */
+body, .main-content {
+  font-family: -apple-system, "Pretendard", "Apple SD Gothic Neo",
+               "Noto Sans KR", "Segoe UI", Roboto, sans-serif;
+  word-break: keep-all;
+  line-height: 1.7;
+}
+
+/* 코드는 모노스페이스 유지 */
+code, pre {
+  font-family: "JetBrains Mono", "SF Mono", Consolas, "D2Coding", monospace;
+}
+
+/* 랜딩 hero 버튼 간격 */
+.btn + .btn { margin-left: 0.5rem; }
+
+/* 표 가독성 */
+.main-content table {
+  font-size: 0.92em;
+}
+.main-content table th {
+  white-space: nowrap;
+}
+
+/* 인용 박스 모서리 */
+.main-content blockquote {
+  border-radius: 0 6px 6px 0;
+}
+
+/* 본문 max-width 살짝 늘림 (긴 한국어 문장 가독성) */
+.main-content {
+  max-width: 1080px;
+}

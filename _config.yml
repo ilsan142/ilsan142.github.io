@@ -1,0 +1,82 @@
+# ──────────────────────────────────────────────────────────────
+# Bioinformatics × AI Engineers — Jekyll config
+# Theme: just-the-docs (remote_theme, GitHub Pages 호환)
+# ──────────────────────────────────────────────────────────────
+
+title: Bioinformatics × AI Engineers
+description: >-
+  AI를 더 잘 쓰고 싶은 생명정보학자, 그리고 생명정보학에 입문하려는 AI 엔지니어를
+  위한 양방향 가이드. Claude Code / Codex / 전문 bio AI 모델 / agent harnessing.
+lang: ko
+
+# GitHub Pages — User Page (https://ilsan142.github.io/)
+url: "https://ilsan142.github.io"
+baseurl: ""
+
+# ── 테마 ────────────────────────────────────────────────────────
+remote_theme: just-the-docs/just-the-docs
+color_scheme: dark
+
+# ── 검색 ────────────────────────────────────────────────────────
+search_enabled: true
+search:
+  heading_level: 3
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# ── 사이드바 / 네비게이션 ────────────────────────────────────────
+nav_external_links:
+  - title: GitHub
+    url: https://github.com/Yeachan-Heo/oh-my-claudecode
+    hide_icon: false
+
+# 풋터
+footer_content: >-
+  Bioinformatics × AI Engineers · 한국어 가이드 ·
+  MIT License (콘텐츠는 CC BY-SA 4.0).
+
+# ── 코드 / 콜아웃 ───────────────────────────────────────────────
+heading_anchors: true
+aux_links_new_tab: false
+
+callouts_level: quiet
+callouts:
+  note:
+    title: 메모
+    color: blue
+  tip:
+    title: 팁
+    color: green
+  warning:
+    title: 주의
+    color: yellow
+  important:
+    title: 중요
+    color: red
+
+# ── 빌드 ────────────────────────────────────────────────────────
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
+  - omc-guide
+  - .gitignore
+
+# 컬렉션처럼 보이게 — for-bio, for-ai, bridge 디렉터리를 사이트에 포함
+include:
+  - for-bio
+  - for-ai
+  - bridge
+
+permalink: /:path/:basename
